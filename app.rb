@@ -1,5 +1,10 @@
 require 'sinatra'
+set :haml, format: :html5
+
+before do
+  @layout = :layout
+end
 
 get '/' do
-  'Hola mundo'
+  haml :index
 end
