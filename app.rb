@@ -1,5 +1,7 @@
 require 'sinatra'
-set :haml, format: :html5
+require 'haml'
+
+set :haml, { escape_html: false }
 
 before do
   @layout = :layout
